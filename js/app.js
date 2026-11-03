@@ -7,7 +7,7 @@
     "use strict";
 
     const DATA = window.PORTFOLIO_DATA;
-    const STORAGE_CONTACT_KEY = "milton_portfolio_contact_v2";
+    const STORAGE_CONTACT_KEY = "milton_portfolio_contact_v3";
     const STORAGE_THEME_KEY = "milton_portfolio_theme_v2";
 
     const state = {
@@ -22,14 +22,6 @@
     let chartShrinkageInstance = null;
 
     function loadContact() {
-        try {
-            const raw = localStorage.getItem(STORAGE_CONTACT_KEY);
-            if (raw) {
-                return Object.assign({}, DATA.defaultContact, JSON.parse(raw));
-            }
-        } catch (err) {
-            // fallback
-        }
         return Object.assign({}, DATA.defaultContact);
     }
 
@@ -461,10 +453,10 @@
                 <div class="cv-role">${escapeHtml(c.roleTitle)}</div>
                 <div class="cv-contact-line">
                     <span><i class="fa-solid fa-location-dot"></i> ${escapeHtml(c.location)}</span>
-                    <span><i class="fa-solid fa-envelope"></i> ${escapeHtml(c.email)}</span>
-                    <span><i class="fa-solid fa-phone"></i> ${escapeHtml(c.phone)}</span>
-                    <span><i class="fa-brands fa-github"></i> ${escapeHtml(c.githubLabel)}</span>
-                    <span><i class="fa-brands fa-linkedin"></i> ${escapeHtml(c.linkedinLabel)}</span>
+                    <span><i class="fa-solid fa-envelope"></i> <a href="mailto:${escapeHtml(c.email)}" style="color:inherit; text-decoration:none;">${escapeHtml(c.email)}</a></span>
+                    <span><i class="fa-solid fa-phone"></i> <a href="tel:${escapeHtml(c.phone.replace(/\s+/g, ''))}" style="color:inherit; text-decoration:none;">${escapeHtml(c.phone)}</a></span>
+                    <span><i class="fa-brands fa-linkedin"></i> <a href="${escapeHtml(c.linkedin)}" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">${escapeHtml(c.linkedinLabel)}</a></span>
+                    <span><i class="fa-brands fa-github"></i> <a href="${escapeHtml(c.github)}" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">${escapeHtml(c.githubLabel)}</a></span>
                 </div>
             </header>
 

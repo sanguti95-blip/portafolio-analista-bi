@@ -8,12 +8,12 @@ window.PORTFOLIO_DATA = {
         fullName: "Milton Sánchez Gutiérrez",
         roleTitle: "Analista Comercial & Pricing · Administrador de Operaciones Retail",
         location: "Heredia, Costa Rica",
-        email: "milton.sanchez.cr@outlook.com",
-        phone: "+506 8888-8888",
+        email: "sanguti95@gmail.com",
+        phone: "+506 6375834",
         github: "https://github.com/sanguti95-blip",
         githubLabel: "github.com/sanguti95-blip",
-        linkedin: "https://www.linkedin.com/in/milton-sanchez-cr",
-        linkedinLabel: "linkedin.com/in/milton-sanchez-cr",
+        linkedin: "https://www.linkedin.com/in/milton-s%C3%A1nchez-guti%C3%A9rrez-606863186/",
+        linkedinLabel: "linkedin.com/in/milton-sánchez-gutiérrez-606863186",
         portfolioUrl: "https://sanguti95-blip.github.io/portafolio-analista-bi/"
     },
 
