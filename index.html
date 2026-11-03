@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milton Sánchez Gutiérrez — Portafolio BI, Pricing & Operaciones Retail</title>
+    <meta name="description" content="Portafolio analítico y CV de Milton Sánchez Gutiérrez: +8 años en Retail y Consumo Masivo, Turnaround Comercial (+12.5%), Reducción de Mermas (-50.6%), GMROI 2.02x y Business Intelligence.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23090d16'/%3E%3Crect x='6' y='16' width='4' height='10' rx='1' fill='%2322c55e'/%3E%3Crect x='14' y='11' width='4' height='15' rx='1' fill='%2322c55e'/%3E%3Crect x='22' y='6' width='4' height='20' rx='1' fill='%23f8fafc'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- =================================================================== -->
+    <!-- TOP APP BAR (Identity + Segmented Control + Actions)                -->
+    <!-- =================================================================== -->
+    <header class="topbar no-print">
+        <div class="topbar-inner">
+            <div class="identity-cluster">
+                <div class="avatar-monogram" aria-hidden="true">MS</div>
+                <div class="identity-text">
+                    <div class="identity-row">
+                        <h1 class="identity-name" id="headerFullName">Milton Sánchez Gutiérrez</h1>
+                        <span class="status-pill"><span class="status-dot"></span>Heredia, CR</span>
+                    </div>
+                    <p class="identity-role" id="headerRoleTitle">Analista Comercial & Pricing · Administrador de Operaciones Retail</p>
+                </div>
+            </div>
+
+            <!-- Segmented Control (namethatui.com pattern) -->
+            <nav class="segmented-control" role="tablist" aria-label="Vistas del portafolio">
+                <button type="button" class="seg-btn active" role="tab" aria-selected="true" data-view="dashboard" id="tabBtnDashboard">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Impacto & BI</span>
+                </button>
+                <button type="button" class="seg-btn" role="tab" aria-selected="false" data-view="projects" id="tabBtnProjects">
+                    <i class="fa-solid fa-cubes"></i>
+                    <span>Demos & Casos</span>
+                    <span class="seg-count">4</span>
+                </button>
+                <button type="button" class="seg-btn" role="tab" aria-selected="false" data-view="cv" id="tabBtnCv">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>CV Formal (PDF)</span>
+                </button>
+            </nav>
+
+            <!-- Action Cluster -->
+            <div class="action-cluster">
+                <button type="button" class="cmd-trigger" id="btnOpenCmd" title="Abrir paleta de comandos (Ctrl+K)">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Comandos</span>
+                    <kbd>⌘K</kbd>
+                </button>
+                <button type="button" class="icon-btn" id="btnToggleTheme" title="Alternar tema Claro / Oscuro" aria-label="Alternar tema Claro u Oscuro">
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>
+                </button>
+                <button type="button" class="btn-ghost" id="btnOpenContactModal">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <span>Contacto</span>
+                </button>
+                <button type="button" class="btn-primary" id="btnExportPdf">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Exportar PDF</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =================================================================== -->
+    <!-- MAIN WORKSPACE                                                      -->
+    <!-- =================================================================== -->
+    <main class="workspace">
+
+        <!-- =============================================================== -->
+        <!-- VISTA 1: BENTO EJECUTIVO ULTRA-VISUAL (IMPACTO & BI)            -->
+        <!-- =============================================================== -->
+        <section class="view-panel active" id="view-dashboard" role="tabpanel" aria-labelledby="tabBtnDashboard">
+            
+            <!-- Filter Slicer Bar + Quick Live Demo Banner -->
+            <div class="slicer-bar no-print">
+                <div class="slicer-chips" id="domainSlicerContainer" role="toolbar" aria-label="Filtrar métricas por dominio"></div>
+                <div class="live-flagship-link">
+                    <span class="flagship-label">Caso Estrella Activo:</span>
+                    <a href="https://sanguti95-blip.github.io/analista-pricing-interfrutd/" target="_blank" rel="noopener" class="flagship-pill">
+                        <span>Suite Pricing B2B & OTIF Interfrutd (211 SKUs)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- FILA 1: 5 STAT CARDS (Tabular Nums + Sparkbars + Hover Popover) -->
+            <div class="kpi-bento-strip" id="kpiBentoStrip"></div>
+
+            <!-- FILA 2: 2 GRÁFICOS EJECUTIVOS (Turnaround Q1-Q4 & Caída de Merma) -->
+            <div class="charts-bento-grid">
+                <article class="bento-cell chart-cell">
+                    <div class="cell-header">
+                        <div>
+                            <h2 class="cell-title">Recuperación y Crecimiento Comercial (Turnaround 2026)</h2>
+                            <p class="cell-sub">Variación interanual de ventas (%) · Country House Santo Domingo</p>
+                        </div>
+                        <div class="metric-callout">
+                            <span class="mono-val positive">-14% → +12.5%</span>
+                            <span class="callout-sub">Pico mensual +30%</span>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <canvas id="chartTurnaround" aria-label="Gráfico de recuperación comercial de -14% en Q1 a +12.5% en Q3 y pico de +30%" role="img"></canvas>
+                    </div>
+                </article>
+
+                <article class="bento-cell chart-cell">
+                    <div class="cell-header">
+                        <div>
+                            <h2 class="cell-title">Control de Mermas (-50.6%) & Utilidad Neta (+9.3%)</h2>
+                            <p class="cell-sub">Índice de merma (% s/ventas) vs. incremento de utilidad post-merma</p>
+                        </div>
+                        <div class="metric-callout">
+                            <span class="mono-val positive">4.75% → 2.32%</span>
+                            <span class="callout-sub">3 → 4 recepciones AM</span>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <canvas id="chartShrinkage" aria-label="Gráfico de reducción de merma de 4.75% a 2.32% e incremento de utilidad neta de +9.3%" role="img"></canvas>
+                    </div>
+                </article>
+            </div>
+
+            <!-- FILA 3: TRAYECTORIA (ACCORDION DISCLOSURE) + STACK (DATA BARS) -->
+            <div class="bottom-bento-grid">
+                <!-- Columna Izquierda: Experiencia con Progressive Disclosure -->
+                <article class="bento-cell">
+                    <div class="cell-header">
+                        <div>
+                            <h2 class="cell-title">Trayectoria Operativa y Comercial (+8 Años)</h2>
+                            <p class="cell-sub">Haz clic en cada puesto para desplegar el detalle ejecutivo</p>
+                        </div>
+                        <button type="button" class="text-action-btn" id="btnToggleAllExp">Expandir todo</button>
+                    </div>
+                    <div class="disclosure-list" id="experienceDisclosureList"></div>
+                </article>
+
+                <!-- Columna Derecha: Matriz de Herramientas (Meter Bars) + Credenciales -->
+                <div class="side-bento-stack">
+                    <article class="bento-cell">
+                        <div class="cell-header">
+                            <div>
+                                <h2 class="cell-title">Dominio Técnico & Comercial</h2>
+                                <p class="cell-sub">Herramientas de análisis, pricing y ejecución</p>
+                            </div>
+                        </div>
+                        <div class="meter-list" id="skillsMeterList"></div>
+                    </article>
+
+                    <article class="bento-cell">
+                        <div class="cell-header">
+                            <h2 class="cell-title">Certificaciones, Idiomas & Licencias</h2>
+                        </div>
+                        <div class="credentials-chip-grid" id="credentialsChipGrid"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- VISTA 2: DEMOS EN VIVO & CASOS DE ESTUDIO                       -->
+        <!-- =============================================================== -->
+        <section class="view-panel" id="view-projects" role="tabpanel" aria-labelledby="tabBtnProjects">
+            <div class="projects-bento-grid" id="projectsBentoGrid"></div>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- VISTA 3: HOJA DE VIDA FORMAL (1 PÁGINA IMPRIMIBLE / ATS)        -->
+        <!-- =============================================================== -->
+        <section class="view-panel" id="view-cv" role="tabpanel" aria-labelledby="tabBtnCv">
+            <div class="cv-toolbar no-print">
+                <span class="cv-toolbar-note"><i class="fa-solid fa-circle-check"></i> Formato ejecutivo optimizado para reclutadores y sistemas ATS (1 página Carta / A4).</span>
+                <div class="cv-toolbar-actions">
+                    <button type="button" class="btn-ghost" id="btnEditContactFromCv">
+                        <i class="fa-solid fa-pen"></i> Editar Datos de Contacto
+                    </button>
+                    <button type="button" class="btn-primary" id="btnPrintCvNow">
+                        <i class="fa-solid fa-print"></i> Imprimir / Guardar como PDF
+                    </button>
+                </div>
+            </div>
+            <article class="cv-sheet" id="cvPrintableSheet"></article>
+        </section>
+
+    </main>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE-OVER SHEET DRAWER (namethatui.com pattern for Project Detail) -->
+    <!-- =================================================================== -->
+    <div class="drawer-backdrop no-print" id="projectDrawerBackdrop" aria-hidden="true">
+        <aside class="sheet-drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+            <div class="drawer-header">
+                <div>
+                    <span class="drawer-tag" id="drawerTag">CASO DE ESTUDIO</span>
+                    <h3 class="drawer-title" id="drawerTitle">Detalle del Proyecto</h3>
+                </div>
+                <button type="button" class="icon-btn" id="btnCloseDrawer" aria-label="Cerrar panel">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="drawer-body" id="drawerBodyContent"></div>
+        </aside>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- COMMAND PALETTE (Ctrl+K / Spotlight pattern)                        -->
+    <!-- =================================================================== -->
+    <div class="modal-backdrop no-print" id="cmdBackdrop" aria-hidden="true">
+        <div class="cmd-dialog" role="dialog" aria-modal="true" aria-label="Paleta de comandos">
+            <div class="cmd-input-row">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="cmdSearchInput" placeholder="Buscar métrica (ej. GMROI, merma, turnaround), proyecto o acción..." autocomplete="off">
+                <kbd>ESC</kbd>
+            </div>
+            <div class="cmd-results" id="cmdResultsList"></div>
+        </div>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- MODAL EDITAR CONTACTO                                               -->
+    <!-- =================================================================== -->
+    <div class="modal-backdrop no-print" id="contactModalBackdrop" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+            <div class="modal-header">
+                <h3 id="contactModalTitle">Personalizar Datos de Contacto</h3>
+                <button type="button" class="icon-btn" id="btnCloseContactModal" aria-label="Cerrar modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form id="contactForm" class="modal-form">
+                <div class="form-row">
+                    <label for="inputFullName">Nombre Completo</label>
+                    <input type="text" id="inputFullName" required>
+                </div>
+                <div class="form-row">
+                    <label for="inputRoleTitle">Titular Profesional</label>
+                    <input type="text" id="inputRoleTitle" required>
+                </div>
+                <div class="form-grid-2">
+                    <div class="form-row">
+                        <label for="inputEmail">Correo Electrónico</label>
+                        <input type="email" id="inputEmail" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="inputPhone">Teléfono / WhatsApp</label>
+                        <input type="text" id="inputPhone" required>
+                    </div>
+                </div>
+                <div class="form-grid-2">
+                    <div class="form-row">
+                        <label for="inputLocation">Ubicación</label>
+                        <input type="text" id="inputLocation" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="inputLinkedin">LinkedIn (URL o usuario)</label>
+                        <input type="text" id="inputLinkedin">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-ghost" id="btnResetContact">Restaurar</button>
+                    <button type="submit" class="btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/portfolioData.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
