@@ -6,7 +6,7 @@
 window.PORTFOLIO_DATA = {
     defaultContact: {
         fullName: "Milton Sánchez Gutiérrez",
-        roleTitle: "Analista Comercial & Pricing · Administrador de Operaciones Retail",
+        roleTitle: "Analista Comercial & Pricing · Operaciones Retail · Heredia, CR",
         location: "Heredia, Costa Rica",
         email: "sanguti95@gmail.com",
         phone: "+506 6375834",
@@ -69,22 +69,11 @@ window.PORTFOLIO_DATA = {
             domain: "bi",
             metric: "+35%",
             unit: "Rotación Clave",
-            label: "BI & Señalización Piso",
-            delta: "Dashboard Real-Time",
+            label: "BI & Ejecución en Piso",
+            delta: "+6.4% Tráfico (2 Turnos)",
             deltaTone: "positive",
-            popover: "Implementación de dashboard gerencial automatizado en tiempo real (ventas, márgenes, mermas y GMROI) y modernización de layout/precios en piso.",
+            popover: "Dashboard gerencial automatizado en tiempo real (ventas, márgenes, mermas y GMROI), señalización en piso (+35% rotación) y esquema de 2 turnos (+6.4% tráfico).",
             bars: [50, 62, 75, 88, 100]
-        },
-        {
-            id: "kpi-trafico",
-            domain: "turnaround",
-            metric: "+6.4%",
-            unit: "Tráfico",
-            label: "Esquema 2 Turnos",
-            delta: "100% Cobertura Apertura",
-            deltaTone: "positive",
-            popover: "Diseño de nuevo esquema de 2 turnos rotativos que consolidó al equipo operativo, mejoró el clima laboral y elevó el tráfico de clientes en +6.4%.",
-            bars: [65, 74, 83, 91, 100]
         }
     ],
 
@@ -109,33 +98,24 @@ window.PORTFOLIO_DATA = {
             period: "Enero 2026 – Presente",
             isCurrent: true,
             domains: ["turnaround", "mermas", "gmroi", "bi"],
-            brief: "Gestión integral de unidad retail y ruta mayorista liderando la operación en piso, el equipo de trabajo y el control de inventarios en alineación estratégica con la Gerencia Comercial.",
+            brief: "Gestión integral de unidad retail y ruta mayorista en alineación con la Gerencia Comercial.",
             pills: [
                 { label: "Ventas Q3", value: "+12.5% (Pico +30%)" },
                 { label: "Merma", value: "-50.6% (4.75%→2.32%)" },
-                { label: "GMROI Neto", value: "2.02x · Rot 4.3x" },
-                { label: "Líneas Clave", value: "+35% Rotación" }
+                { label: "GMROI Neto", value: "2.02x · Rot 4.3x" }
             ],
             bullets: [
                 {
-                    title: "Recuperación y Crecimiento Comercial (Turnaround)",
-                    text: "En conjunto con la Gerencia Comercial, revertimos una contracción inicial de -14% en ventas (Q1) hasta estabilizar la operación en el Q2 y lograr un crecimiento interanual de +12.5% en el Q3 (con picos mensuales de +30%) y +7.7% al inicio del Q4."
+                    title: "Turnaround Comercial & Tráfico (+12.5% Q3 / +6.4% Tráfico)",
+                    text: "Revertimos una contracción inicial de -14% (Q1) a +12.5% en Q3 (picos +30%) y +7.7% en Q4 junto a la Gerencia Comercial, implementando 2 turnos rotativos con cobertura total."
                 },
                 {
-                    title: "Control de Mermas y Rentabilidad Operativa",
-                    text: "Reduje la merma operativa un -50.6% (bajando el índice de 4.75% a 2.32% sobre las ventas) e incrementé la utilidad neta post-merma en +9.3%, combinando la supervisión de calidades en piso con la optimización de abastecimiento (de 3 a 4 recepciones matutinas coordinadas con la Gerencia Comercial)."
+                    title: "Control de Mermas (-50.6%) & Utilidad Neta (+9.3%)",
+                    text: "Bajé el índice de merma de 4.75% a 2.32% sobre ventas y elevé la utilidad neta post-merma en +9.3% optimizando calidades en piso y pasando de 3 a 4 recepciones matutinas."
                 },
                 {
-                    title: "Optimización de Inventario y GMROI",
-                    text: "En coordinación con la Gerencia Comercial, ejecutamos la gestión por categorías (Category Management) y depuración de catálogo, reduciendo el capital inmovilizado en -12%, manteniendo una rotación de 4.3 veces al mes y elevando el GMROI Neto a 2.02x."
-                },
-                {
-                    title: "Business Intelligence y Ejecución en Piso",
-                    text: "Desarrollé e implementé un dashboard gerencial automatizado para el control en tiempo real de KPIs (ventas, márgenes, mermas y GMROI) y modernicé la señalización de precios y layout de tienda, impulsando en +35% la rotación de líneas clave."
-                },
-                {
-                    title: "Reestructuración de Turnos y Liderazgo de Equipo",
-                    text: "Diseñé e implementé un nuevo esquema de 2 turnos rotativos y consolidé al equipo operativo, mejorando la calidad de vida del personal, asegurando la cobertura total de tienda desde la apertura y elevando el tráfico de clientes en +6.4%."
+                    title: "GMROI Neto (2.02x) & BI en Tiempo Real (+35% Rotación)",
+                    text: "Reduje el capital inmovilizado un -12% (rotación 4.3x/mes) mediante Category Management y desplegué un dashboard automatizado en tiempo real que impulsó +35% las líneas clave."
                 }
             ]
         },
@@ -147,24 +127,19 @@ window.PORTFOLIO_DATA = {
             period: "Noviembre 2021 – Diciembre 2025",
             isCurrent: false,
             domains: ["mermas", "gmroi", "turnaround"],
-            brief: "Coordinación y gestión operativa de departamento en cadena de supermercados premium, garantizando estándares de calidad, frescura y servicio al cliente.",
+            brief: "Coordinación operativa de departamento en cadena de supermercados premium.",
             pills: [
-                { label: "Trayectoria", value: "4 Años 2 Meses" },
-                { label: "Formato", value: "Retail Premium" },
-                { label: "Foco", value: "Rotación & Layouts" }
+                { label: "Trayectoria", value: "+4 Años" },
+                { label: "Formato", value: "Retail Premium" }
             ],
             bullets: [
                 {
-                    title: "Operación en Supermercado Premium",
-                    text: "Coordinación y gestión operativa de departamento en cadena de supermercados premium, garantizando estándares de calidad, frescura y servicio al cliente."
-                },
-                {
-                    title: "Control de Rotación e Inventarios Cíclicos",
-                    text: "Control de rotación de producto, ejecución de inventarios cíclicos, supervisión de layouts en góndola y cumplimiento estricto de normativas de manipulación de alimentos."
+                    title: "Calidad, Frescura y Rotación",
+                    text: "Supervisión de layouts en góndola, inventarios cíclicos, frescura de perecederos y cumplimiento estricto de inocuidad alimentaria."
                 },
                 {
                     title: "Productividad y Abastecimiento",
-                    text: "Manejo de indicadores de productividad, control de quiebres de stock y optimización de flujos de reposición."
+                    text: "Control de indicadores de productividad, prevención de quiebres de stock y optimización de flujos de reposición."
                 }
             ]
         },
@@ -176,20 +151,15 @@ window.PORTFOLIO_DATA = {
             period: "2018 – Noviembre 2021",
             isCurrent: false,
             domains: ["gmroi", "bi"],
-            brief: "Soporte en control administrativo de tienda, cuadratura de cajas, recepción y verificación de órdenes de compra frente a facturas de proveedores.",
+            brief: "Control administrativo de punto de venta, recepción de proveedores y auditoría de márgenes.",
             pills: [
                 { label: "Trayectoria", value: "+3.5 Años" },
-                { label: "Control", value: "OC vs Facturas" },
-                { label: "Finanzas", value: "Ventas & Márgenes" }
+                { label: "Control", value: "OC vs Facturas" }
             ],
             bullets: [
                 {
-                    title: "Control Administrativo y Proveedores",
-                    text: "Soporte en control administrativo de tienda, cuadratura de cajas, recepción y verificación de órdenes de compra frente a facturas de proveedores."
-                },
-                {
-                    title: "Conciliación de Inventarios y Márgenes",
-                    text: "Seguimiento a inventarios, conciliación de diferencias y soporte en reportería básica de ventas y márgenes."
+                    title: "Auditoría de Compras e Inventarios",
+                    text: "Cuadratura de cajas, verificación de órdenes de compra frente a facturas de proveedores, conciliación de inventarios y reportería de ventas y márgenes."
                 }
             ]
         }
@@ -288,19 +258,13 @@ window.PORTFOLIO_DATA = {
     skills: [
         { name: "Pricing, Elasticidad, COGS & GMROI", category: "Comercial", score: 96, domain: "bi" },
         { name: "Control de Mermas & Ejecución (5S / 4DX)", category: "Operaciones", score: 96, domain: "mermas" },
-        { name: "Category Management & Racionalización ABC", category: "Inventario", score: 95, domain: "gmroi" },
-        { name: "Excel Avanzado (Power Query & Modelado)", category: "Analítica", score: 95, domain: "bi" },
-        { name: "Liderazgo de Piso, Ruta Mayorista & Turnos", category: "Gestión", score: 95, domain: "turnaround" },
-        { name: "Power BI & Dashboards Ejecutivos", category: "BI", score: 92, domain: "bi" },
-        { name: "SQL (PostgreSQL / Supabase)", category: "Datos", score: 90, domain: "bi" },
-        { name: "Python (Pandas / OpenPyXL) & JS Automation", category: "Código", score: 88, domain: "bi" }
+        { name: "Category Management & Pareto ABC", category: "Inventario", score: 95, domain: "gmroi" },
+        { name: "Excel Avanzado, Power BI & SQL", category: "Analítica", score: 94, domain: "bi" }
     ],
 
     credentials: [
         { title: "Data Analytics Essentials", org: "Cisco Academy & MICITT", badge: "2026" },
-        { title: "Inglés Intermedio (B2)", org: "NetAcad & MICITT", badge: "En curso" },
-        { title: "Manipulación de Alimentos", org: "Habilitado Vigente", badge: "Activo" },
-        { title: "Bachillerato Educación Media", org: "Liceo Colorado de Abangares", badge: "2017" },
-        { title: "Licencias B1 (Auto) y A2 (Moto)", org: "COSEVI Costa Rica", badge: "Al día" }
+        { title: "Inglés Intermedio (B2)", org: "NetAcad & MICITT", badge: "2026" },
+        { title: "Manipulación de Alimentos & Licencias B1/A2", org: "Habilitado al día", badge: "Activo" }
     ]
 };

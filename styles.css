@@ -389,11 +389,11 @@ html[data-theme="light"] .btn-primary {
 }
 
 /* ==========================================================================
-   FILA 1: 5 BENTO STAT CARDS + HOVER POPOVER
+   FILA 1: 4 BENTO STAT CARDS + HOVER POPOVER
    ========================================================================== */
 .kpi-bento-strip {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
     margin-bottom: 16px;
 }

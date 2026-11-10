@@ -24,12 +24,11 @@
                 <div class="identity-text">
                     <div class="identity-row">
                         <h1 class="identity-name" id="headerFullName">Milton Sánchez Gutiérrez</h1>
-                        <span class="status-pill"><span class="status-dot"></span>Heredia, CR</span>
                         <a href="mailto:sanguti95@gmail.com" class="status-pill" style="text-decoration:none;"><i class="fa-solid fa-envelope"></i> sanguti95@gmail.com</a>
                         <a href="tel:+5066375834" class="status-pill" style="text-decoration:none;"><i class="fa-solid fa-phone"></i> 6375834</a>
                         <a href="https://www.linkedin.com/in/milton-s%C3%A1nchez-guti%C3%A9rrez-606863186/" target="_blank" rel="noopener" class="status-pill" style="text-decoration:none;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                     </div>
-                    <p class="identity-role" id="headerRoleTitle">Analista Comercial & Pricing · Administrador de Operaciones Retail</p>
+                    <p class="identity-role" id="headerRoleTitle">Analista Comercial & Pricing · Operaciones Retail · Heredia, CR</p>
                 </div>
             </div>
 
@@ -60,10 +59,6 @@
                 <button type="button" class="icon-btn" id="btnToggleTheme" title="Alternar tema Claro / Oscuro" aria-label="Alternar tema Claro u Oscuro">
                     <i class="fa-solid fa-sun" id="themeIcon"></i>
                 </button>
-                <a href="https://www.linkedin.com/in/milton-s%C3%A1nchez-guti%C3%A9rrez-606863186/" target="_blank" rel="noopener" class="btn-ghost" title="Ver perfil de LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
                 <button type="button" class="btn-primary" id="btnExportPdf">
                     <i class="fa-solid fa-download"></i>
                     <span>Exportar PDF</span>
@@ -78,7 +73,7 @@
     <main class="workspace">
 
         <!-- =============================================================== -->
-        <!-- VISTA 1: BENTO EJECUTIVO ULTRA-VISUAL (IMPACTO & BI)            -->
+        <!-- VISTA 1: BENTO EJECUTIVO MINIMALISTA (IMPACTO & BI)             -->
         <!-- =============================================================== -->
         <section class="view-panel active" id="view-dashboard" role="tabpanel" aria-labelledby="tabBtnDashboard">
             
@@ -86,83 +81,57 @@
             <div class="slicer-bar no-print">
                 <div class="slicer-chips" id="domainSlicerContainer" role="toolbar" aria-label="Filtrar métricas por dominio"></div>
                 <div class="live-flagship-link">
-                    <span class="flagship-label">Caso Estrella Activo:</span>
+                    <span class="flagship-label">Sistema Activo:</span>
                     <a href="https://sanguti95-blip.github.io/analista-pricing-interfrutd/" target="_blank" rel="noopener" class="flagship-pill">
-                        <span>Suite Pricing B2B & OTIF Interfrutd (211 SKUs)</span>
+                        <span>Abrir Suite Pricing B2B & OTIF Interfrutd</span>
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- FILA 1: 5 STAT CARDS (Tabular Nums + Sparkbars + Hover Popover) -->
+            <!-- FILA 1: 4 KPIs CLAVE -->
             <div class="kpi-bento-strip" id="kpiBentoStrip"></div>
 
-            <!-- FILA 2: 2 GRÁFICOS EJECUTIVOS (Turnaround Q1-Q4 & Caída de Merma) -->
-            <div class="charts-bento-grid">
-                <article class="bento-cell chart-cell">
-                    <div class="cell-header">
-                        <div>
-                            <h2 class="cell-title">Recuperación y Crecimiento Comercial (Turnaround 2026)</h2>
-                            <p class="cell-sub">Variación interanual de ventas (%) · Country House Santo Domingo</p>
-                        </div>
-                        <div class="metric-callout">
-                            <span class="mono-val positive">-14% → +12.5%</span>
-                            <span class="callout-sub">Pico mensual +30%</span>
-                        </div>
-                    </div>
-                    <div class="chart-box">
-                        <canvas id="chartTurnaround" aria-label="Gráfico de recuperación comercial de -14% en Q1 a +12.5% en Q3 y pico de +30%" role="img"></canvas>
-                    </div>
-                </article>
-
-                <article class="bento-cell chart-cell">
-                    <div class="cell-header">
-                        <div>
-                            <h2 class="cell-title">Control de Mermas (-50.6%) & Utilidad Neta (+9.3%)</h2>
-                            <p class="cell-sub">Índice de merma (% s/ventas) vs. incremento de utilidad post-merma</p>
-                        </div>
-                        <div class="metric-callout">
-                            <span class="mono-val positive">4.75% → 2.32%</span>
-                            <span class="callout-sub">3 → 4 recepciones AM</span>
-                        </div>
-                    </div>
-                    <div class="chart-box">
-                        <canvas id="chartShrinkage" aria-label="Gráfico de reducción de merma de 4.75% a 2.32% e incremento de utilidad neta de +9.3%" role="img"></canvas>
-                    </div>
-                </article>
-            </div>
-
-            <!-- FILA 3: TRAYECTORIA (ACCORDION DISCLOSURE) + STACK (DATA BARS) -->
+            <!-- FILA 2: 1 GRÁFICO PRINCIPAL + TRAYECTORIA Y STACK EN 1 SOLA VISTA LIMPIA -->
             <div class="bottom-bento-grid">
-                <!-- Columna Izquierda: Experiencia con Progressive Disclosure -->
+                <!-- Columna Izquierda: Experiencia Resumida en 3 Puntos Cortos -->
                 <article class="bento-cell">
                     <div class="cell-header">
                         <div>
                             <h2 class="cell-title">Trayectoria Operativa y Comercial (+8 Años)</h2>
-                            <p class="cell-sub">Haz clic en cada puesto para desplegar el detalle ejecutivo</p>
+                            <p class="cell-sub">3 hitos clave por rol · Haz clic para desplegar</p>
                         </div>
                         <button type="button" class="text-action-btn" id="btnToggleAllExp">Expandir todo</button>
                     </div>
                     <div class="disclosure-list" id="experienceDisclosureList"></div>
                 </article>
 
-                <!-- Columna Derecha: Matriz de Herramientas (Meter Bars) + Credenciales -->
+                <!-- Columna Derecha: 1 Gráfico Principal + Stack Técnico & Credenciales -->
                 <div class="side-bento-stack">
-                    <article class="bento-cell">
+                    <article class="bento-cell chart-cell">
                         <div class="cell-header">
                             <div>
-                                <h2 class="cell-title">Dominio Técnico & Comercial</h2>
-                                <p class="cell-sub">Herramientas de análisis, pricing y ejecución</p>
+                                <h2 class="cell-title">Turnaround Comercial 2026</h2>
+                                <p class="cell-sub">Variación interanual de ventas (%) · Country House</p>
+                            </div>
+                            <div class="metric-callout">
+                                <span class="mono-val positive">-14% → +12.5%</span>
+                                <span class="callout-sub">Pico mensual +30%</span>
                             </div>
                         </div>
-                        <div class="meter-list" id="skillsMeterList"></div>
+                        <div class="chart-box" style="height: 195px;">
+                            <canvas id="chartTurnaround" aria-label="Gráfico de recuperación comercial de -14% en Q1 a +12.5% en Q3 y pico de +30%" role="img"></canvas>
+                        </div>
                     </article>
 
                     <article class="bento-cell">
                         <div class="cell-header">
-                            <h2 class="cell-title">Certificaciones, Idiomas & Licencias</h2>
+                            <div>
+                                <h2 class="cell-title">Stack & Competencias Clave</h2>
+                            </div>
                         </div>
-                        <div class="credentials-chip-grid" id="credentialsChipGrid"></div>
+                        <div class="meter-list" id="skillsMeterList"></div>
+                        <div class="credentials-chip-grid" id="credentialsChipGrid" style="margin-top: 12px;"></div>
                     </article>
                 </div>
             </div>
